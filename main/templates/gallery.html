@@ -1,0 +1,79 @@
+{% load static %}
+<h2 class="text-4xl font-bold mx-auto text-center font-handwriting mb-8">Explore our Gallery</h2>
+
+<div class="w-5/6 mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="sm:hidden">
+        <label for="tabs" class="sr-only">Select tab</label>
+        <select id="tabs" class="bg-gray-50 border-0 border-b border-gray-200 text-gray-900 text-sm rounded-t-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+            <option>All</option>
+            <option>Events</option>
+            <option>Photos</option>
+            <option>Videos</option>
+            <option>Pastors</option>
+        </select>
+    </div>
+    <ul class="hidden text-sm font-medium text-center text-gray-500 divide-x divide-gray-200 rounded-lg sm:flex dark:divide-gray-600 dark:text-gray-400 rtl:divide-x-reverse" id="fullWidthTab" data-tabs-toggle="#fullWidthTabContent" role="tablist">
+        <li class="w-full">
+            <button id="all-tab" data-tabs-target="#all" type="button" role="tab" aria-controls="all" aria-selected="true" class="inline-block w-full p-4 rounded-ss-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">All</button>
+        </li>
+        <li class="w-full">
+            <button id="events-tab" data-tabs-target="#events" type="button" role="tab" aria-controls="events" aria-selected="false" class="inline-block w-full p-4 bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Events</button>
+        </li>
+        <li class="w-full">
+            <button id="photos-tab" data-tabs-target="#photos" type="button" role="tab" aria-controls="photos" aria-selected="false" class="inline-block w-full p-4 rounded-se-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Photos</button>
+        </li>
+        <li class="w-full">
+            <button id="videos-tab" data-tabs-target="#videos" type="button" role="tab" aria-controls="videos" aria-selected="false" class="inline-block w-full p-4 rounded-se-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Videos</button>
+        </li>
+        <li class="w-full">
+            <button id="pastors-tab" data-tabs-target="#pastors" type="button" role="tab" aria-controls="pastors" aria-selected="false" class="inline-block w-full p-4 rounded-se-lg bg-gray-50 hover:bg-gray-100 focus:outline-none dark:bg-gray-700 dark:hover:bg-gray-600">Pastors</button>
+        </li>
+    </ul>
+    <div id="fullWidthTabContent" class="border-t border-gray-200 dark:border-gray-600">
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="all" role="tabpanel" aria-labelledby="all-tab">
+            <div class="grid grid-cols-3 h-3/4 gap-4">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 1" class="w-full h-full object-cover">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 2" class="w-full h-full object-cover">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 3" class="w-full h-full object-cover">
+            </div>
+        </div>            
+        <div class="hidden p-4 bg-white h-auto rounded-lg md:p-8 dark:bg-gray-800" id="events" role="tabpanel" aria-labelledby="events-tab">
+            <div class="grid grid-cols-3 h-3/4 gap-4">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 1" class="w-full h-full object-cover">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 2" class="w-full h-full object-cover">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 3" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="photos" role="tabpanel" aria-labelledby="photos-tab">
+            <div class="grid grid-cols-3 h-3/4 gap-4">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 1" class="w-full h-full object-cover">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 2" class="w-full h-full object-cover">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 3" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="videos" role="tabpanel" aria-labelledby="videos-tab">
+            <div class="grid grid-cols-3 h-3/4 gap-4">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 1" class="w-full h-full object-cover">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 2" class="w-full h-full object-cover">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 3" class="w-full h-full object-cover">
+            </div>
+        </div>
+        <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="pastors" role="tabpanel" aria-labelledby="pastors-tab">
+            <div class="grid grid-cols-3 gap-4">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 1" class="w-full h-3/4 object-cover">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 2" class="w-full h-3/4 object-cover">
+                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 3" class="w-full h-3/4 object-cover">            </div>
+        </div>
+        <div class="flex items-center justify-center">
+            <button data-tooltip-target="tooltip-gallery" data-tooltip-placement="right" type="button" class="ms-3 mb-2 md:mb-0 text-white bg-purple-700 h-12 justify-center items-center hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 16 4-4-4-4m6 8 4-4-4-4"/>
+                </svg>                  
+            </button>
+            <div id="tooltip-gallery" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                More from Gallery
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+        </div>
+    </div>
+</div>

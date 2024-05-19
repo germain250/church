@@ -1,0 +1,238 @@
+{% extends "../_base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<style>
+.font-heading {
+    font-family: 'Montserrat', sans-serif;
+}
+.slider-btn.active {
+    background-color: #fbbf24; /* purple-500 */
+}
+.slider-btn.inactive {
+    background-color: #6b7280; /* gray-500 */
+}
+.date-ribbon {
+    position: absolute;
+    top: 16px;
+    left: -32px;
+    background: #1E3A8A;
+    color: #fff;
+    padding: 8px 16px;
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    text-align: center;
+    width: 100px;
+    font-size: 12px;
+}
+.icons li {
+    list-style-type: none;
+    background: rgb(86, 86, 247);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .icons li:hover {
+    background: #edffec;
+    color: #000;
+  }
+</style>
+
+{% include "hero.html" %}
+
+<!--Event and latest Sermon-->
+{% include "event_ser.html" %}
+
+<!--Calendar-->
+{% include "calendar.html" %}
+
+{% include "donate.html" %}
+
+<h2 id="church" class="text-4xl font-bold mx-auto text-center font-handwriting mb-8">Convenience Holy Church Faith</h2>
+
+  <section class="flex p-4 justify-center h-[70vh]">
+    <img src="https://www.webstrot.com/html/gracechurch/images/content/about_img.jpg" alt="Church" class="w-1/2 object-cover">
+    <div class="w-full h-full flex justify-center items-center">
+        <div class="max-w-4xl p-8 bg-white shadow-2xl p-4 bg-opacity-50 rounded-lg">
+            <h1 class="text-2xl text-center font-bold text-purple-400 underline-purple">Welcome to <span class="font-handwriting">Convenience Holy Church</span></h1>
+            <p class="mt-4"><span class="font-handwriting text-lg">Mathew  28:19</span>   Therefore go and make disciples of all nations, baptizing them in the name of Father and of the son and of the holy spirit! And teaching them to obey everything I have commanded you! <a href="/about" class="text-purple-400 underline">Read More</a></p>
+            
+            <div class="mt-8 grid grid-cols-2 gap-12">
+                <div>
+                    <h2 class="flex items-center text-xl font-semibold"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M10 15l-3.76 2.45.74-4.35L4 9.66l4.38-.38L10 5.5l1.62 3.78 4.38.38-3.24 3.44.74 4.35L10 15z"/></svg> Glorify God</h2>
+                    <p class="mt-2">Convenience church put at the foremost front Glorifying the only living God</p>
+                </div>
+                <div>
+                    <h2 class="flex items-center text-xl font-semibold"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm-1-11V6a1 1 0 112 0v1h-2zm0 4h2v4h-2v-4z" clip-rule="evenodd"/></svg> Believe Bible</h2>
+                    <p class="mt-2">The power of the bible as the guide to our faith and the revelation of God's work on us.</p>
+                </div>
+                <div>
+                    <h2 class="flex items-center text-xl font-semibold"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 2a1 1 0 000 2h1.18a1 1 0 01.993.883l.88 6.607a2 2 0 001.51 1.51l6.608.88a1 1 0 01.883.993V15a1 1 0 002 0v-1a2 2 0 00-1.51-1.511l-6.608-.88a1 1 0 01-.993-.883L4.18 3H3a1 1 0 00-1-1zM10 16a4 4 0 11-4-4 4 4 0 014 4zm-2-3a1 1 0 10-1 1 1 1 0 001-1z" clip-rule="evenodd"/></svg> Love Community</h2>
+                    <p class="mt-2">Promote love in the church community.</p>
+                </div>
+                <div>
+                    <h2 class="flex items-center text-xl font-semibold"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 3.172A4.992 4.992 0 005 8c0 2.276 1.11 4.158 2.778 5.278C9.84 14.445 10 15 10 15s.16-.555 2.222-1.722C13.89 12.158 15 10.276 15 8a4.992 4.992 0 00-5-4.828zM8 5a3 3 0 116 0v1H8V5z" clip-rule="evenodd"/></svg> Love People</h2>
+                    <p class="mt-2">Love the people outside the church as the Love commandment reveals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="bg-white text-gray-900 py-12">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div>
+            <h3 class="text-4xl font-bold text-purple-400" data-count="240">0</h3>
+            <p class="mt-2">BELIEVERS</p>
+        </div>
+        <div>
+            <h3 class="text-4xl font-bold text-purple-400" data-count="5">0</h3>
+            <p class="mt-2">MINISTRIES</p>
+        </div>
+        <div>
+            <h3 class="text-4xl font-bold text-purple-400" data-count="24">0</h3>
+            <p class="mt-2">VOLUNTEERS</p>
+        </div>
+        <div>
+            <h3 class="text-4xl font-bold text-purple-400" data-count="275">0</h3>
+            <p class="mt-2">SAVED SOULS</p>
+        </div>
+    </div>
+</section>
+
+<!--Word of God-->
+
+  {% include "../word.html" %}
+
+  <!--Sermons Section-->
+
+  {% include "../sermons.html" %}
+
+  <!--Gallery Section-->
+
+  {% include "gallery.html" %}
+
+  {% include "../events.html" %}
+
+  <!--Blog Section-->
+  {% include "../blog.html" %}
+
+<!--Contact Section-->
+{% include "../contact.html" %}
+  
+
+
+
+
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+<script>
+    const titles = [
+        'YOUR CHURCH IS YOUR HOUSE',
+        'WELCOME TO OUR CONGREGATION',
+        'JOIN US IN WORSHIP AND FAITH',
+        'FIND PEACE AND COMMUNITY'
+    ];
+    let index = 0;
+    const heroTitle = document.getElementById('hero-title');
+    const buttons = document.querySelectorAll('.slider-btn');
+
+    function changeTitle() {
+        index = (index + 1) % titles.length;
+        updateSlider();
+    }
+
+    function setSlide(i) {
+        index = i;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        heroTitle.textContent = titles[index];
+        buttons.forEach((btn, i) => {
+            btn.classList.toggle('active', i === index);
+            btn.classList.toggle('inactive', i !== index);
+        });
+        ScrollReveal().reveal('#hero-title', { delay: 200, duration: 1000, origin: 'right', distance: '120px' });
+        ScrollReveal().reveal('.reveal',{delay: 300, duration: 2000, origin: 'left', distance: '200px'});
+    }
+
+    function prevSlide() {
+        index = (index - 1 + titles.length) % titles.length;
+        updateSlider();
+    }
+
+    function nextSlide() {
+        index = (index + 1) % titles.length;
+        updateSlider();
+    }
+
+    setInterval(changeTitle, 7000);
+    updateSlider();
+            // Counter Animation
+            function animateCounters() {
+                const counters = document.querySelectorAll('[data-count]');
+                counters.forEach(counter => {
+                    const updateCount = () => {
+                        const target = +counter.getAttribute('data-count');
+                        const count = +counter.innerText;
+    
+                        const increment = target / 200;
+    
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count + increment);
+                            setTimeout(updateCount, 10);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+    
+                    updateCount();
+                });
+            }
+    
+            // Detect when the section is in view
+            const section = document.querySelector('.py-12');
+            const observer = new IntersectionObserver(entries => {
+                if (entries[0].isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(section);
+                }
+            }, {
+                threshold: 0.5
+            });
+    
+            observer.observe(section);
+
+            {% comment %} const slides = document.querySelectorAll('.slide');
+            let currentSlide = 0;
+        
+            function showSlide(index) {
+              slides.forEach((slide, i) => {
+                slide.classList.remove('active');
+                if (i === index) {
+                  slide.classList.add('active');
+                }
+              });
+            }
+        
+            function nextSlide() {
+              currentSlide = (currentSlide + 1) % slides.length;
+              showSlide(currentSlide);
+            }
+        
+            setInterval(nextSlide, 5000); {% endcomment %}
+</script>
+{% endblock content %}
