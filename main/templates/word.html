@@ -28,6 +28,7 @@
 
   <div class="relative w-4/5 mx-auto h-[50vh] overflow-hidden">
     <div id="slider" class="relative h-full">
+      {% for word in words_of_god %}
       <div class="slide absolute inset-0 flex items-center justify-center bg-white active">
         <div class="text-center">
           <div class="flex items-center justify-center mb-4">
@@ -38,25 +39,11 @@
               </svg>
             </div>
           </div>
-          <p class="text-2xl italic">"For God so loved the world that he gave his one and only begotten Son, that who ever believes in him shall not perish but have eternal life."</p>
-          <p class="mt-4 text-lg">Bible: Mathew 23:40</p>
+          <p class="text-2xl italic">"{{word.scripture}}"</p>
+          <p class="mt-4 text-lg">Bible: {{word.verse|slice:'30:'}}</p>
         </div>
       </div>
-      <!-- Repeat similar blocks for other slides with different verses -->
-      <div class="slide absolute inset-0 flex items-center justify-center">
-        <div class="text-center">
-          <div class="flex items-center justify-center mb-4">
-            <div class="bg-yellow-500 text-black p-4 rounded-full">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a9 9 0 00-9 9v4a9 9 0 0018 0v-4a9 9 0 00-9-9z"></path>
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2a9 9 0 00-9 9v4a9 9 0 0018 0v-4a9 9 0 00-9-9z"></path>
-              </svg>
-            </div>
-          </div>
-          <p class="text-2xl italic">"Another Bible verse here."</p>
-          <p class="mt-4 text-lg">Bible: Reference</p>
-        </div>
-      </div>
+      {% endfor %}
       <!-- Add more slides as needed -->
     </div>
   </div>

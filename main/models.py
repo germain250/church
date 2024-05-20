@@ -61,7 +61,7 @@ class Cause(models.Model):
 class Blog(models.Model):
     author = models.CharField(max_length=100,null=True,blank=True)
     title = models.CharField(max_length=100,null=True,blank=True)
-    content = models.CharField(max_length=100,null=True,blank=True)
+    content = models.TextField(null=True,blank=True)
     attachment = models.FileField(max_length=100,null=True,blank=True,upload_to=blog_files)
     created_at = models.DateTimeField(auto_now_add=True,max_length=100,null=True,blank=True)
     
@@ -76,6 +76,17 @@ class Gallery(models.Model):
     title = models.CharField(max_length=100,null=True,blank=True)
     description = models.CharField(max_length=100,null=True,blank=True)
     attachment = models.FileField(max_length=100,null=True,blank=True,upload_to=gallery)
+    
+class Word(models.Model):
+    verse = models.CharField(max_length=30,null=True,blank=True)
+    scripture = models.TextField(null=True,blank=True)
+    
+class ChurchState(models.Model):
+    believers = models.IntegerField(null=True, blank=True)
+    ministries = models.IntegerField(null=True, blank=True)
+    pastors = models.IntegerField(null=True, blank=True)
+    volunteers = models.IntegerField(null=True, blank=True)
+    saved = models.IntegerField(null=True, blank=True)
     
     
     

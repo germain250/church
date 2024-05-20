@@ -1,49 +1,43 @@
-   {% load static %}
-   <h2 id="news" class="text-4xl font-bold mx-auto text-center font-handwriting mb-8">Top News from Us</h2>
+{% load static %}
+<h2 id="news" class="text-4xl font-bold mx-auto text-center font-handwriting mb-8">Top News from Us</h2>
 
-   <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">
-            <!-- Card 1 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Children's Adoption" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <div class="text-purple-500 font-bold text-lg mb-2">15 May</div>
-                    <h2 class="text-xl font-semibold mb-2">Children's Adoption</h2>
-                    <p class="text-gray-700 mb-4">Proin gravida nibh vel velit auctor aliquet. Aenean itudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris...</p>
-                    <a href="#" class="text-purple-500 hover:text-purple-700">Read More</a>
-                </div>
-                <div class="bg-gray-100 px-6 py-4 flex items-center text-sm text-gray-600">
-                    <span class="mr-2"><i class="fas fa-user"></i> by Jane Smith</span>
-                    <span class="mr-2"><i class="fas fa-comments"></i> 04 Comm.</span>
-                    <span><i class="fas fa-folder"></i> in news, prayer</span>
-                </div>
+{% if blogs %}
+<div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6">
+        {% for blog in blogs %}
+        <!-- Cards -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            {% if blog.file_type == '.jpg' or blog.file_type == '.jpeg' or blog.file_type == '.png' %}
+                <img src="{{ blog.media_file.url }}" alt="{{ blog.title }}" class="w-full h-64 object-cover">
+            {% endif %}
+            <div class="p-6">
+                <div class="text-purple-500 font-bold text-lg mb-2">{{ blog.created_at|date:"d M" }}</div>
+                <h2 class="text-xl font-semibold mb-2">{{ blog.title }}</h2>
+                <p class="text-gray-700 mb-4">{{ blog.content|truncatewords:50 }}</p>
+                <a href="#" class="text-purple-500 hover:text-purple-700">Read More</a>
             </div>
-            <!-- Card 2 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Lord of our life and our salvation" class="w-full h-64 object-cover">
-                <div class="p-6">
-                    <div class="text-purple-500 font-bold text-lg mb-2">15 May</div>
-                    <h2 class="text-xl font-semibold mb-2">Lord of our life and our salvation</h2>
-                    <p class="text-gray-700 mb-4">Proin gravida nibh vel velit auctor aliquet. Aenean itudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris...</p>
-                    <a href="#" class="text-purple-500 hover:text-purple-700">Read More</a>
-                </div>
-                <div class="bg-gray-100 px-6 py-4 flex items-center text-sm text-gray-600">
-                    <span class="mr-2"><i class="fas fa-user"></i> by Jane Smith</span>
-                    <span class="mr-2"><i class="fas fa-comments"></i> 04 Comm.</span>
-                    <span><i class="fas fa-folder"></i> in news, prayer</span>
-                </div>
+            <div class="bg-gray-100 px-6 py-4 flex items-center text-sm text-gray-600">
+                <span class="mr-2"><i class="fas fa-user"></i> by {{ blog.author }}</span>
+                <span class="mr-2"><i class="fas fa-comments"></i> {{ blog.comments.all.count }} Comm.</span>
             </div>
-            <div class="flex items-center justify-center">
-                <button data-tooltip-target="tooltip-right" data-tooltip-placement="right" type="button" class="ms-3 mb-2 md:mb-0 text-white bg-purple-700 h-12 justify-center items-center hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 16 4-4-4-4m6 8 4-4-4-4"/>
-                    </svg>                  
-                </button>
-                <div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                    More News
-                    <div class="tooltip-arrow" data-popper-arrow></div>
-                </div>
+        </div>
+        {% endfor %}
+        <div class="flex items-center justify-center">
+            <button data-tooltip-target="tooltip-right" data-tooltip-placement="right" type="button" class="ms-3 mb-2 md:mb-0 text-white bg-purple-700 h-12 justify-center items-center hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7 16 4-4-4-4m6 8 4-4-4-4"/>
+                </svg>                  
+            </button>
+            <div id="tooltip-right" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                More News
+                <div class="tooltip-arrow" data-popper-arrow></div>
             </div>
         </div>
     </div>
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</div>
+{% else %}
+<div class="w-screen">
+    <div class="max-w-md mx-auto text-center">No recent News</div>
+</div>
+{% endif %}
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
