@@ -31,38 +31,39 @@
     </ul>
     <div id="fullWidthTabContent" class="border-t border-gray-200 dark:border-gray-600">
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="all" role="tabpanel" aria-labelledby="all-tab">
-            <div class="grid grid-cols-3 h-3/4 gap-4">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 1" class="w-full h-full object-cover">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 2" class="w-full h-full object-cover">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 3" class="w-full h-full object-cover">
+            <div class="grid grid-cols-3 gap-4">
+                {% for gallery in galleries %}
+                    <img src="{{ gallery.attachment.url }}" alt="{{ gallery.title }}" class="w-full h-full object-cover">
+                {% endfor %}
             </div>
         </div>            
         <div class="hidden p-4 bg-white h-auto rounded-lg md:p-8 dark:bg-gray-800" id="events" role="tabpanel" aria-labelledby="events-tab">
-            <div class="grid grid-cols-3 h-3/4 gap-4">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 1" class="w-full h-full object-cover">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 2" class="w-full h-full object-cover">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 3" class="w-full h-full object-cover">
+            <div class="grid grid-cols-3 gap-4">
+                {% for event in events %}
+                    <img src="{{ event.attachment.url }}" alt="{{ event.title }}" class="w-full h-full object-cover">
+                {% endfor %}
             </div>
         </div>
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="photos" role="tabpanel" aria-labelledby="photos-tab">
-            <div class="grid grid-cols-3 h-3/4 gap-4">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 1" class="w-full h-full object-cover">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 2" class="w-full h-full object-cover">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 3" class="w-full h-full object-cover">
+            <div class="grid grid-cols-3 gap-4">
+                {% comment %} {% for photo in photos %}
+                    <img src="{{ photo.attachment.url }}" alt="{{ photo.title }}" class="w-full h-full object-cover">
+                {% endfor %} {% endcomment %}
             </div>
         </div>
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="videos" role="tabpanel" aria-labelledby="videos-tab">
-            <div class="grid grid-cols-3 h-3/4 gap-4">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 1" class="w-full h-full object-cover">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 2" class="w-full h-full object-cover">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 3" class="w-full h-full object-cover">
+            <div class="grid grid-cols-3 gap-4">
+                {% comment %} {% for video in videos %}
+                    <img src="{{ video.attachment.url }}" alt="{{ video.title }}" class="w-full h-full object-cover">
+                {% endfor %} {% endcomment %}
             </div>
         </div>
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="pastors" role="tabpanel" aria-labelledby="pastors-tab">
             <div class="grid grid-cols-3 gap-4">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 1" class="w-full h-3/4 object-cover">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 2" class="w-full h-3/4 object-cover">
-                <img src="{% static 'images/image (2).jpg' %}" alt="Instagram 3" class="w-full h-3/4 object-cover">            </div>
+                {% for pastor in pastors %}
+                    <img src="{{ pastor.profile_pic.url }}" alt="{{ pastor.name }}" class="w-full h-3/4 object-cover">
+                {% endfor %}
+            </div>
         </div>
         <div class="flex items-center justify-center">
             <button data-tooltip-target="tooltip-gallery" data-tooltip-placement="right" type="button" class="ms-3 mb-2 md:mb-0 text-white bg-purple-700 h-12 justify-center items-center hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800">

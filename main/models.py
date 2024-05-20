@@ -25,6 +25,7 @@ class Pastor(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField(max_length=100)
     phone = models.CharField(max_length=100)
+    message = models.CharField(max_length=100,null=True, blank=True)
     address = models.CharField(max_length=100)
     profile_pic = models.ImageField(upload_to=pastor_pic, blank=True, null=True)
     facebook = models.CharField(max_length=100,null=True,blank=True)
@@ -34,7 +35,8 @@ class Pastor(models.Model):
     
 class Sermon(models.Model):
     title = models.CharField(max_length=100)
-    description = models.CharField(max_length=100)
+    major_title = models.CharField(max_length=100,null=True,blank=True)
+    description = models.TextField(blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True,max_length=100,null=True,blank=True)
     updated_at = models.DateField(auto_now=True,max_length=100,null=True,blank=True)
     pastor = models.ForeignKey(Pastor,on_delete=models.CASCADE)
@@ -43,10 +45,13 @@ class Sermon(models.Model):
     
 class Event(models.Model):
     title = models.CharField(max_length=100)
-    description = models.CharField(max_length=100)
+    description = models.TextField(null=True, blank=True)
+    venue = models.TextField(null=True, blank=True)
+    pastor = models.ForeignKey(Pastor, blank=True,null=True, on_delete=models.CASCADE)
     start_date = models.DateTimeField(null=True, blank=True)
     end_date = models.DateTimeField(null=True, blank=True)
     attachment = models.FileField(null=True, blank=True, upload_to=event_pic)
+    created_at = models.DateTimeField(null=True, blank=True,auto_now_add=True)
     
 class Prayer(models.Model):
     name = models.CharField(max_length=100)
@@ -57,6 +62,8 @@ class Cause(models.Model):
     title = models.CharField(max_length=100,null=True,blank=True)
     description = models.CharField(max_length=100,null=True,blank=True)
     attachment = models.FileField(max_length=100,null=True,blank=True,upload_to=causes_file)
+    created_at = models.DateTimeField(null=True, blank=True,auto_now_add=True)
+
     
 class Blog(models.Model):
     author = models.CharField(max_length=100,null=True,blank=True)
@@ -76,10 +83,14 @@ class Gallery(models.Model):
     title = models.CharField(max_length=100,null=True,blank=True)
     description = models.CharField(max_length=100,null=True,blank=True)
     attachment = models.FileField(max_length=100,null=True,blank=True,upload_to=gallery)
+    created_at = models.DateTimeField(null=True, blank=True,auto_now_add=True)
+
     
 class Word(models.Model):
     verse = models.CharField(max_length=30,null=True,blank=True)
     scripture = models.TextField(null=True,blank=True)
+    created_at = models.DateTimeField(null=True, blank=True,auto_now_add=True)
+
     
 class ChurchState(models.Model):
     believers = models.IntegerField(null=True, blank=True)
@@ -87,6 +98,8 @@ class ChurchState(models.Model):
     pastors = models.IntegerField(null=True, blank=True)
     volunteers = models.IntegerField(null=True, blank=True)
     saved = models.IntegerField(null=True, blank=True)
+    created_at = models.DateTimeField(null=True, blank=True,auto_now_add=True)
+
     
     
     
