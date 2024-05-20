@@ -60,7 +60,7 @@ class Prayer(models.Model):
     
 class Cause(models.Model):
     title = models.CharField(max_length=100,null=True,blank=True)
-    description = models.CharField(max_length=100,null=True,blank=True)
+    description = models.TextField(null=True,blank=True)
     attachment = models.FileField(max_length=100,null=True,blank=True,upload_to=causes_file)
     created_at = models.DateTimeField(null=True, blank=True,auto_now_add=True)
 

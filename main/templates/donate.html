@@ -3,27 +3,15 @@
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold font-handwriting mb-8">Recent Causes Help Us!</h2>
       <div class="flex justify-center gap-8">
+        {% for cause in causes %}
         <div class="bg-white rounded-lg shadow-lg p-6">
-          <img src="{% static "images/image (01).jpg" %}" alt="Cause Image" class="w-full h-40 object-cover rounded-t-lg mb-4">
-          <h3 class="text-xl font-semibold mb-2">Youth Development</h3>
-          <p class="text-gray-700 mb-4">Offering youth programs, mentoring, and educational opportunities to support young people's growth and development. <a href="#" class="text-blue-600">Read More</a></p>
-          <p class="text-xl font-bold text-purple-500 mb-2">$42k Done of $50k Needed</p>
+          <img src="{{cause.attachment.url}}" alt="{{cause.title}}" class="w-full h-40 object-cover rounded-t-lg mb-4">
+          <h3 class="text-xl font-semibold mb-2">{{ cause.title }}</h3>
+          <p class="text-gray-700 mb-4">{{cause.description}}. <a href="#" class="text-blue-600">Read More</a></p>
+          <button class="bg-purple-500 text-white font-bold py-2 px-4 rounded-full font-handwriting">Donate</button>
           <button class="bg-purple-500 text-white font-bold py-2 px-4 rounded-full font-handwriting">Volunteer</button>
         </div>
-        <div class="bg-white rounded-lg shadow-lg p-6">
-          <img src="{% static "images/image (01).jpg" %}" alt="Cause Image" class="w-full h-40 object-cover rounded-t-lg mb-4">
-          <h3 class="text-xl font-semibold mb-2">Elderly Care</h3>
-          <p class="text-gray-700 mb-4">Providing support and companionship for the elderly through visits, care facilities, and assistance programs. <a href="#" class="text-blue-600">Read More</a></p>
-          <p class="text-xl font-bold text-purple-500 mb-2">$42k Done of $50k Needed</p>
-          <button class="bg-purple-500 text-white font-bold py-2 px-4 rounded-full font-handwriting">Volunteer</button>
-        </div>
-        <div class="bg-white rounded-lg shadow-lg p-6">
-          <img src="{% static "images/image (01).jpg" %}" alt="Cause Image" class="w-full h-40 object-cover rounded-t-lg mb-4">
-          <h3 class="text-xl font-semibold mb-2">Family Services</h3>
-          <p class="text-gray-700 mb-4">Offering counseling, support groups, and resources to strengthen families and address issues such as addiction or domestic violence. <a href="#" class="text-blue-600">Read More</a></p>
-          <p class="text-xl font-bold text-purple-500 mb-2">$42k Done of $50k Needed</p>
-          <button class="bg-purple-500 text-white font-bold py-2 px-4 rounded-full font-handwriting">Volunteer</button>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>

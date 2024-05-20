@@ -7,6 +7,7 @@ urlpatterns = [
     path('',index,name='index'),
     path('about/',about,name='about'),
     path('prayer/',prayer,name='about'),
+    path('save_prayer/',save_prayer,name='save_prayer'),
 
 ]
 if settings.DEBUG:
