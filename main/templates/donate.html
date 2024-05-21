@@ -2,7 +2,7 @@
 <section class="py-12 w-5/6 mx-auto">
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold font-handwriting mb-8">Recent Causes Help Us!</h2>
-      <div class="flex justify-center gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {% for cause in causes %}
         <div class="bg-white rounded-lg shadow-lg p-6">
           <img src="{{cause.attachment.url}}" alt="{{cause.title}}" class="w-full h-40 object-cover rounded-t-lg mb-4">

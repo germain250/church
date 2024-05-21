@@ -101,26 +101,26 @@
         z-index: -1;
     }
 </style>
-<body class="bg-white text-slate-500 dark:bg-dark-800 dark:text-slate-700">
+<body class="bg-white text-slate-500">
     <header>
-        <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <nav class="bg-white fixed w-full z-20 top-0 start-0 border-b border-gray-200">
             <div class="max-w-screen-3xl flex flex-wrap items-center justify-around mx-auto py-8">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <span class="self-center text-2xl font-handwriting font-semibold dark:text-white text-black whitespace-nowrap">Convenience Church</span>
+                <span class="self-center text-2xl font-handwriting font-semibold text-black whitespace-nowrap">Convenience Church</span>
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-full text-lg px-8 py-2 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800 font-handwriting">Donate </button>
-                <button type="button" class="text-purple-500  font-medium rounded-lg text-sm px-4 py-2 text-center hover:text-white dark:hover:text-purple-500">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-full text-lg px-8 py-2 text-center font-handwriting">Donate </button>
+                <button type="button" class="text-purple-500  font-medium rounded-lg text-sm px-4 py-2 text-center hover:text-white">
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m21 21-3.5-3.5M17 10a7 7 0 1 1-14 0 7 7 0 0 1 14 0Z"/>
                     </svg>                      
                 </button>
-                <button type="button" class="text-purple-500  font-medium rounded-lg text-sm px-4 py-2 text-center hover:text-white dark:hover:text-purple-500">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <button type="button" class="text-purple-500  font-medium rounded-lg text-sm px-4 py-2 text-center hover:text-white">
+                    <svg class="w-6 h-6 text-gray-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M7.926 10.898 15 7.727m-7.074 5.39L15 16.29M8 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm12 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm0-11a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z"/>
                     </svg>                      
                 </button>
-                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-sticky" aria-expanded="false">
                   <span class="sr-only">Open main menu</span>
                   <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -128,68 +128,68 @@
               </button>
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-              <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white ">
                 <li>
-                  <a href="/" class="block py-2 px-3 text-white bg-purple-700 rounded md:bg-transparent md:text-purple-700 md:p-0 md:dark:text-purple-500" aria-current="page">Home</a>
+                  <a href="/" class="block py-2 px-3 text-white bg-purple-700 rounded md:bg-transparent md:text-purple-700 md:p-0" aria-current="page">Home</a>
                 </li>
                 <li>
-                  <a href="#church" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Our Church</a>
+                  <a href="#church" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 ">Our Church</a>
                 </li>
                 <li>
-                    <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700">Ministries <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <button id="mega-menu-full-cta-image-button" data-collapse-toggle="mega-menu-full-image-dropdown" class="flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 ">Ministries <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
   </svg></button>
                 </li>
                 <li>
-                  <a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+                  <a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 ">Contact</a>
                 </li>
                 <li>
-                    <a href="/prayer" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Prayer Requests</a>
+                    <a href="/prayer" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 ">Prayer Requests</a>
                 </li>
                 <li>
-                    <a href="#news" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 md:dark:hover:text-purple-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">News</a>
+                    <a href="#news" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-purple-700 md:p-0 ">News</a>
                  </li>
               </ul>
             </div>
             </div>
             <!--Mega menu-->
-            <div id="mega-menu-full-image-dropdown" class="hidden mt-1 bg-white border-gray-200 shadow-sm border-y dark:bg-gray-800 dark:border-gray-600">
-                <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 dark:text-gray-400 md:grid-cols-3 md:px-6">
+            <div id="mega-menu-full-image-dropdown" class="hidden mt-1 bg-white border-gray-200 shadow-sm border-y    ">
+                <div class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500   md:grid-cols-3 md:px-6">
                     <ul class="hidden mb-4 space-y-4 md:mb-0 md:block" aria-labelledby="mega-menu-full-image-button">
                         <li>
-                            <a href="/about/#worship-team" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <a href="/about/#worship-team" class="hover:underline hover:text-blue-600  ">
                                 Worship team
                             </a>
                         </li>
                         <li>
-                            <a href="/about/#children-ministry" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <a href="/about/#children-ministry" class="hover:underline hover:text-blue-600  ">
                                 Children Ministry
                             </a>
                         </li>
                         <li>
-                            <a href="/about/#youth-ministry" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <a href="/about/#youth-ministry" class="hover:underline hover:text-blue-600  ">
                                 Youth ministry
                             </a>
                         </li>
                         <li>
-                            <a href="/about/#adult-ministry" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <a href="/about/#adult-ministry" class="hover:underline hover:text-blue-600  ">
                                 Adult Ministry
                             </a>
                         </li>
                     </ul>
                     <ul class="mb-4 space-y-4 md:mb-0">
                         <li>
-                            <a href="/about/#community-outreach" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <a href="/about/#community-outreach" class="hover:underline hover:text-blue-600  ">
                                 Community Outreach
                             </a>
                         </li>
                         <li>
-                            <a href="/about/#prayer-ministry" class="hover:underline hover:text-blue-600 dark:hover:text-blue-500">
+                            <a href="/about/#prayer-ministry" class="hover:underline hover:text-blue-600  ">
                                 Prayer Ministry
                             </a>
                         </li>
                     </ul>
-                    <a href="#" class="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light dark:hover:bg-blend-darken" style="background-image: url(/docs/images/dashboard-overview.png)">
+                    <a href="#" class="p-8 bg-local bg-gray-500 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light" style="background-image: url(/docs/images/dashboard-overview.png)">
                         <p class="max-w-xl mb-5 font-extrabold leading-tight tracking-tight text-xl font-handwriting text-white">Convenience Holy Church.</p>
                         <button type="button" class="inline-flex items-center px-2.5 py-1.5 text-xs font-medium text-center text-white border border-white rounded-lg hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-700">
                             Get In Touch
@@ -228,20 +228,17 @@
                         <h2 class="text-xl font-semibold mb-4">Latest News</h2>
                         <div class="h-1 w-10 bg-purple-500 mb-4"></div>
                         <div class="space-y-4">
-                            <div class="flex items-center">
-                                <img src="{% static 'images/image (1).jpg' %}" alt="News Image 1" class="w-12 h-12 mr-4">
-                                <div>
-                                    <a href="#" class="text-purple-500 hover:underline">Lord of our life & our salvation</a>
-                                    <p class="text-sm">17 May 2024</p>
+                            {% for blog in blogs %}
+                            <a href="#{{blog.title}}">
+                                <div class="flex items-center">
+                                    <img src="{{blog.attachment.url}}" alt="{{blog.title}}" class="w-12 h-12 mr-4">
+                                    <div>
+                                        <a href="#" class="text-purple-500 hover:underline">{{ blog.title }}</a>
+                                        <p class="text-sm">{{ blog.created_at|date }}</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="flex items-center">
-                                <img src="{% static 'images/image (1).jpg' %}" alt="News Image 2" class="w-12 h-12 mr-4">
-                                <div>
-                                    <a href="#" class="text-purple-500 hover:underline">Lord of our life & our salvation</a>
-                                    <p class="text-sm">17 May 2024</p>
-                                </div>
-                            </div>
+                            </a>
+                            {% endfor %}
                         </div>
                     </div>
                     <!-- Useful Links Section -->
@@ -260,13 +257,18 @@
                     <div>
                         <h2 class="text-xl font-semibold mb-4">Sermons</h2>
                         <div class="h-1 w-10 bg-purple-500 mb-4"></div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <img src="{% static 'images/image (1).jpg' %}" alt="Instagram 1" class="w-full h-16 object-cover">
-                            <img src="{% static 'images/image (1).jpg' %}" alt="Instagram 2" class="w-full h-16 object-cover">
-                            <img src="{% static 'images/image (1).jpg' %}" alt="Instagram 3" class="w-full h-16 object-cover">
-                            <img src="{% static 'images/image (1).jpg' %}" alt="Instagram 4" class="w-full h-16 object-cover">
-                            <img src="{% static 'images/image (1).jpg' %}" alt="Instagram 5" class="w-full h-16 object-cover">
-                            <img src="{% static 'images/image (1).jpg' %}" alt="Instagram 6" class="w-full h-16 object-cover">
+                        <div class="grid grid-cols-2 gap-2">
+                            {% for sermon in sermons %}
+                            <div>
+                                <img src="{{sermon.pastor.profile_pic.url}}" alt="Instagram" class="h-12 h-12 rounded-full object-cover">
+                                <div class="mt-4">
+                                    <audio controls class="w-full">
+                                      <source src="{{ sermon.attachment.url }}" type="audio/mpeg">
+                                      Your browser does not support the audio element.
+                                    </audio>
+                                  </div>
+                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

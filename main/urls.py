@@ -8,6 +8,7 @@ urlpatterns = [
     path('about/',about,name='about'),
     path('prayer/',prayer,name='about'),
     path('save_prayer/',save_prayer,name='save_prayer'),
+    path('send_email/',send_email,name='send_email'),
 
 ]
 if settings.DEBUG:

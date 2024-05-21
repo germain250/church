@@ -13,41 +13,20 @@
 
 {% include "donate.html" %}
 
-<h2 id="church" class="text-4xl font-bold mx-auto text-center font-handwriting mb-8">Convenience Holy Church Faith</h2>
+<h2 id="church" class="text-4xl font-bold p-4 mx-auto text-center font-handwriting mb-8">Convenience Holy Church Faith</h2>
 
 {% include "about.html" %}
 
-<!-- Statistics Section -->
-<section class="bg-white text-gray-900 py-12">
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-        {% for number in church_status %}
-        <div>
-            <h3 class="text-4xl font-bold text-purple-400" data-count="{{number.believers}}">0</h3>
-            <p class="mt-2">BELIEVERS</p>
-        </div>
-        <div>
-            <h3 class="text-4xl font-bold text-purple-400" data-count="{{number.ministries}}">0</h3>
-            <p class="mt-2">MINISTRIES</p>
-        </div>
-        <div>
-            <h3 class="text-4xl font-bold text-purple-400" data-count="{{number.volunteers}}">0</h3>
-            <p class="mt-2">VOLUNTEERS</p>
-        </div>
-        <div>
-            <h3 class="text-4xl font-bold text-purple-400" data-count="{{number.saved}}">0</h3>
-            <p class="mt-2">SAVED SOULS</p>
-        </div>
-        {% endfor %}
-    </div>
-</section>
 
-<!--Word of God-->
 
-  {% include "../word.html" %}
 
   <!--Sermons Section-->
 
   {% include "../sermons.html" %}
+
+  <!--Word of God-->
+
+  {% include "../word.html" %}
 
   <!--Gallery Section-->
 
@@ -143,24 +122,5 @@
             });
     
             observer.observe(section);
-
-            {% comment %} const slides = document.querySelectorAll('.slide');
-            let currentSlide = 0;
-        
-            function showSlide(index) {
-              slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) {
-                  slide.classList.add('active');
-                }
-              });
-            }
-        
-            function nextSlide() {
-              currentSlide = (currentSlide + 1) % slides.length;
-              showSlide(currentSlide);
-            }
-        
-            setInterval(nextSlide, 5000); {% endcomment %}
 </script>
 {% endblock content %}

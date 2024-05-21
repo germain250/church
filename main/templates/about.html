@@ -1,13 +1,13 @@
 {% load static %}
 
-<section class="flex p-4 justify-center h-[70vh]">
-    <img src="{% static 'images/hero.webp' %}" alt="Church" class="w-1/2 object-cover">
+<section class="lg:flex block p-4 justify-center min-h-[70vh]">
+    <img src="{% static 'images/hero.webp' %}" alt="Church" class="w-full md:w-1/2 h-auto rounded-lg shadow-lg">
     <div class="w-full h-full flex justify-center items-center">
         <div class="max-w-4xl p-8 bg-white shadow-2xl p-4 rounded-lg">
             <h1 class="text-2xl text-center font-bold text-purple-400 underline-purple">Welcome to <span class="font-handwriting">Convenience Holy Church</span></h1>
             <p class="mt-4"><span class="font-handwriting text-lg">Mathew  28:19</span>   Therefore go and make disciples of all nations, baptizing them in the name of Father and of the son and of the holy spirit! And teaching them to obey everything I have commanded you! <a href="/about" class="text-purple-400 underline">Read More</a></p>
             
-            <div class="mt-8 grid grid-cols-2 gap-12">
+            <div class="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div>
                     <h2 class="flex items-center text-xl font-semibold"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M10 15l-3.76 2.45.74-4.35L4 9.66l4.38-.38L10 5.5l1.62 3.78 4.38.38-3.24 3.44.74 4.35L10 15z"/></svg> Glorify God</h2>
                     <p class="mt-2">Convenience church put at the foremost front Glorifying the only living God</p>
