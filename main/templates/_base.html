@@ -231,7 +231,7 @@
                             {% for blog in blogs %}
                             <a href="#{{blog.title}}">
                                 <div class="flex items-center">
-                                    <img src="{{blog.attachment.url}}" alt="{{blog.title}}" class="w-12 h-12 mr-4">
+                                    <img src="{{blog.attachment.url}}" class="w-12 h-12 mr-4">
                                     <div>
                                         <a href="#" class="text-purple-500 hover:underline">{{ blog.title }}</a>
                                         <p class="text-sm">{{ blog.created_at|date }}</p>
@@ -246,11 +246,11 @@
                         <h2 class="text-xl font-semibold mb-4">Useful Links</h2>
                         <div class="h-1 w-10 bg-purple-500 mb-4"></div>
                         <ul class="space-y-2">
-                            <li><a href="#" class="footer-link">Who we are?</a></li>
-                            <li><a href="#" class="footer-link">Support and FAQ's</a></li>
-                            <li><a href="#" class="footer-link">Contact us</a></li>
-                            <li><a href="#" class="footer-link">Prayer request</a></li>
-                            <li><a href="#" class="footer-link">Volunteer</a></li>
+                            <li><a href="/about" class="footer-link">Who we are?</a></li>
+                            <li><a href="#contact" class="footer-link">Support</a></li>
+                            <li><a href="#contact" class="footer-link">Contact us</a></li>
+                            <li><a href="/prayer" class="footer-link">Prayer request</a></li>
+                            <li><a href="contact" class="footer-link">Volunteer</a></li>
                         </ul>
                     </div>
                     <!-- Instagram Section -->

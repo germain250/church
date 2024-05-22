@@ -19,14 +19,13 @@
 
 
 
-
-  <!--Sermons Section-->
-
-  {% include "../sermons.html" %}
-
   <!--Word of God-->
 
   {% include "../word.html" %}
+
+    <!--Sermons Section-->
+
+    {% include "../sermons.html" %}
 
   <!--Gallery Section-->
 
@@ -46,48 +45,59 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 
 <script>
-    const titles = [
-        'YOUR CHURCH IS YOUR HOUSE',
-        'WELCOME TO OUR CONGREGATION',
-        'JOIN US IN WORSHIP AND FAITH',
-        'FIND PEACE AND COMMUNITY'
-    ];
-    let index = 0;
-    const heroTitle = document.getElementById('hero-title');
-    const buttons = document.querySelectorAll('.slider-btn');
+const titles = [
+    'YOUR CHURCH IS YOUR HOUSE',
+    'WELCOME TO OUR CONGREGATION',
+    'JOIN US IN WORSHIP AND FAITH',
+    'FIND PEACE AND COMMUNITY'
+];
 
-    function changeTitle() {
-        index = (index + 1) % titles.length;
-        updateSlider();
-    }
+const descriptions = [
+    'With one hand toward God and the other toward people, we commit ourselves to be used by God to Rescue, Recover, & Restore people who have never experienced the Presence and Power of God',
+    'We believe in the power of the Holy Spirit to transform the lives of people and to bring them closer to God',
+    'Our community is open to everyone who seeks a deeper connection with God and fellow believers',
+    'Find peace, joy, and a sense of belonging in our congregation, where faith and fellowship go hand in hand'
+];
 
-    function setSlide(i) {
-        index = i;
-        updateSlider();
-    }
+const heroTitle = document.getElementById('hero-title');
+const description = document.getElementById('description');
+const buttons = document.querySelectorAll('.slider-btn');
+let index = 0;
 
-    function updateSlider() {
-        heroTitle.textContent = titles[index];
-        buttons.forEach((btn, i) => {
-            btn.classList.toggle('active', i === index);
-            btn.classList.toggle('inactive', i !== index);
-        });
-        ScrollReveal().reveal('#hero-title', { delay: 200, duration: 1000, origin: 'right', distance: '120px' });
-        ScrollReveal().reveal('.reveal',{delay: 300, duration: 2000, origin: 'left', distance: '200px'});
-    }
-
-    function prevSlide() {
-        index = (index - 1 + titles.length) % titles.length;
-        updateSlider();
-    }
-
-    function nextSlide() {
-        index = (index + 1) % titles.length;
-        updateSlider();
-    }
-
-    setInterval(changeTitle, 7000);
+function changeTitle() {
+    index = (index + 1) % titles.length;
     updateSlider();
+}
+
+function setSlide(i) {
+    index = i;
+    updateSlider();
+}
+
+function updateSlider() {
+    heroTitle.textContent = titles[index];
+    description.textContent = descriptions[index];
+    buttons.forEach((btn, i) => {
+        btn.classList.toggle('active', i === index);
+        btn.classList.toggle('inactive', i !== index);
+    });
+    ScrollReveal().reveal('#hero-title', { delay: 200, duration: 1000, origin: 'right', distance: '120px' });
+    ScrollReveal().reveal('.reveal', { delay: 300, duration: 2000, origin: 'left', distance: '200px' });
+}
+
+function prevSlide() {
+    index = (index - 1 + titles.length) % titles.length;
+    updateSlider();
+}
+
+function nextSlide() {
+    index = (index + 1) % titles.length;
+    updateSlider();
+}
+
+setInterval(changeTitle, 7000);
+updateSlider();
+
             // Counter Animation
             function animateCounters() {
                 const counters = document.querySelectorAll('[data-count]');

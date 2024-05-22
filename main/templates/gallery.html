@@ -1,4 +1,4 @@
-{% load static %}
+<!-- {% load static %}
 <h2 class="text-4xl font-bold mx-auto text-center font-handwriting mb-8">Explore our Gallery</h2>
 
 <div class="w-5/6 mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -33,29 +33,83 @@
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="all" role="tabpanel" aria-labelledby="all-tab">
             <div class="grid grid-cols-3 gap-4">
                 {% for gallery in galleries %}
-                    <img src="{{ gallery.attachment.url }}" alt="{{ gallery.title }}" class="w-full h-full object-cover">
+                    {% with gallery.attachment.url as attachment %}
+                        {% if attachment|slice:"-4:" == ".jpg" or attachment|slice:"-4:" == ".png" %}
+                            <img src="{{ attachment }}" alt="{{ gallery.title }}" class="w-full h-full object-cover">
+                        {% elif attachment|slice:"-4:" == ".mp4" %}
+                            <video controls class="w-full h-full object-cover">
+                                <source src="{{ attachment }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        {% elif attachment|slice:"-4:" == ".pdf" %}
+                            <object data="{{ attachment }}" type="application/pdf" class="w-full h-full object-cover">
+                                <embed src="{{ attachment }}" type="application/pdf">
+                                <p>This browser does not support PDFs. Please download the PDF to view it: <a href="{{ attachment }}">Download PDF</a>.</p>
+                                </embed>
+                            </object>
+                        {% endif %}
+                    {% endwith %}
                 {% endfor %}
             </div>
         </div>            
         <div class="hidden p-4 bg-white h-auto rounded-lg md:p-8 dark:bg-gray-800" id="events" role="tabpanel" aria-labelledby="events-tab">
             <div class="grid grid-cols-3 gap-4">
                 {% for event in events %}
-                    <img src="{{ event.attachment.url }}" alt="{{ event.title }}" class="w-full h-full object-cover">
+                    {% with event.attachment.url as attachment %}
+                        {% if attachment|slice:"-4:" == ".jpg" or attachment|slice:"-4:" == ".png" %}
+                            <img src="{{ attachment }}" alt="{{ event.title }}" class="w-full h-full object-cover">
+                        {% elif attachment|slice:"-4:" == ".mp4" %}
+                            <video controls class="w-full h-full object-cover">
+                                <source src="{{ attachment }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        {% elif attachment|slice:"-4:" == ".pdf" %}
+                            <object data="{{ attachment }}" type="application/pdf" class="w-full h-full object-cover">
+                                <embed src="{{ attachment }}" type="application/pdf">
+                                <p>This browser does not support PDFs. Please download the PDF to view it: <a href="{{ attachment }}">Download PDF</a>.</p>
+                                </embed>
+                            </object>
+                        {% endif %}
+                    {% endwith %}
                 {% endfor %}
             </div>
         </div>
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="photos" role="tabpanel" aria-labelledby="photos-tab">
             <div class="grid grid-cols-3 gap-4">
-                {% comment %} {% for photo in photos %}
-                    <img src="{{ photo.attachment.url }}" alt="{{ photo.title }}" class="w-full h-full object-cover">
-                {% endfor %} {% endcomment %}
+                {% for photo in photos %}
+                    {% with photo.attachment.url as attachment %}
+                        {% if attachment|slice:"-4:" == ".jpg" or attachment|slice:"-4:" == ".png" %}
+                            <img src="{{ attachment }}" alt="{{ photo.title }}" class="w-full h-full object-cover">
+                        {% elif attachment|slice:"-4:" == ".mp4" %}
+                            <video controls class="w-full h-full object-cover">
+                                <source src="{{ attachment }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        {% elif attachment|slice:"-4:" == ".pdf" %}
+                            <object data="{{ attachment }}" type="application/pdf" class="w-full h-full object-cover">
+                                <embed src="{{ attachment }}" type="application/pdf">
+                                <p>This browser does not support PDFs. Please download the PDF to view it: <a href="{{ attachment }}">Download PDF</a>.</p>
+                                </embed>
+                            </object>
+                        {% endif %}
+                    {% endwith %}
+                {% endfor %}
             </div>
         </div>
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="videos" role="tabpanel" aria-labelledby="videos-tab">
             <div class="grid grid-cols-3 gap-4">
-                {% comment %} {% for video in videos %}
-                    <img src="{{ video.attachment.url }}" alt="{{ video.title }}" class="w-full h-full object-cover">
-                {% endfor %} {% endcomment %}
+                {% for video in videos %}
+                    {% with video.attachment.url as attachment %}
+                        {% if attachment|slice:"-4:" == ".jpg" or attachment|slice:"-4:" == ".png" %}
+                            <img src="{{ attachment }}" alt="{{ video.title }}" class="w-full h-full object-cover">
+                        {% elif attachment|slice:"-4:" == ".mp4" %}
+                            <video controls class="w-full h-full object-cover">
+                                <source src="{{ attachment }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        {% endif %}
+                    {% endwith %}
+                {% endfor %}
             </div>
         </div>
         <div class="hidden p-4 bg-white rounded-lg md:p-8 dark:bg-gray-800" id="pastors" role="tabpanel" aria-labelledby="pastors-tab">
@@ -78,3 +132,4 @@
         </div>
     </div>
 </div>
+ -->

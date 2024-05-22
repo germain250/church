@@ -46,7 +46,7 @@ class Sermon(models.Model):
 class Event(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField(null=True, blank=True)
-    venue = models.TextField(null=True, blank=True)
+    venue = models.CharField(null=True, max_length=100, blank=True)
     pastor = models.ForeignKey(Pastor, blank=True,null=True, on_delete=models.CASCADE)
     start_date = models.DateTimeField(null=True, blank=True)
     end_date = models.DateTimeField(null=True, blank=True)
